@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>TITLE ACTION</h1>
+<mat-dialog-content>
+  <p>What's your first name?</p>
+  <mat-form-field>
+    <input matInput tabindex="1" [(ngModel)]="dialogModel.firstName">
+  </mat-form-field>
+
+  <p>What's your last name?</p>
+  <mat-form-field>
+    <input matInput tabindex="2" [(ngModel)]="dialogModel.lastName">
+  </mat-form-field>
+
+  <p>Please, write one description:</p>
+  <mat-form-field>
+    <textarea matInput tabindex="3" [(ngModel)]="dialogModel.description"></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<div mat-dialog-actions>
+  <button mat-button (click)="onOk()" mat-dialog-close="OK" tabindex="4">Ok</button>
+  <button mat-button (click)="onClose()" tabindex="-1">Close</button>
+</div>
