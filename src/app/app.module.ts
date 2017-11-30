@@ -10,6 +10,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {OpenDialogExampleComponent} from './material/dialog/open-dialog-example.component';
 import {DialogExampleComponent} from './material/dialog/dialog-example.component';
 import {FormsModule} from '@angular/forms';
+import { PagedTableComponent } from './material/paged-table/paged-table.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {FormsModule} from '@angular/forms';
     AppComponent,
     HomeComponent,
     OpenDialogExampleComponent,
-    DialogExampleComponent
+    DialogExampleComponent,
+    PagedTableComponent
   ],
   imports: [
     BrowserModule,
