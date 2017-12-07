@@ -1,4 +1,4 @@
-export class PagedTableModel {
+export class ElementModel {
   name: string;
   position: number;
   weight: number;

@@ -11,6 +11,7 @@ import {OpenDialogExampleComponent} from './material/dialog/open-dialog-example.
 import {DialogExampleComponent} from './material/dialog/dialog-example.component';
 import {FormsModule} from '@angular/forms';
 import { PagedTableComponent } from './material/paged-table/paged-table.component';
+import {ElementService} from './material/paged-table/element.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { PagedTableComponent } from './material/paged-table/paged-table.componen
     AppMaterialModule
   ],
   entryComponents: [ DialogExampleComponent ],
-  providers: [],
+  providers: [ElementService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

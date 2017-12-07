@@ -8,3 +8,9 @@
   overflow: auto;
   max-height: 500px;
 }
+
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
