@@ -1,5 +1,16 @@
 <form (ngSubmit)="onFilter(f)" #f="ngForm">
 
+  <mat-dialog-content>
+    <label for="name">Name</label>
+    <br>
+    <mat-form-field>
+      <input id="name"
+             matInput
+             ngModel
+             name="name">
+    </mat-form-field>
+  </mat-dialog-content>
+
   <div class="button-row">
     <button type="submit"
             mat-raised-button

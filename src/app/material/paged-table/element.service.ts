@@ -26,7 +26,16 @@ export class ElementService {
     {position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca'},
   ];
 
-  getPagedTables() {
+  getPagedElements(page_size: number, page_number: number) {
+    return this.paginate(this.database, page_size, page_number);
+  }
 
+  getLengthElements() {
+    return this.database.length;
+  }
+
+  private paginate(elements: ElementModel[], page_size: number, page_number: number) {
+    // --page_number; // because pages logically start with 1, but technically with 0
+    return elements.slice(page_number * page_size, (page_number + 1) * page_size);
   }
 }

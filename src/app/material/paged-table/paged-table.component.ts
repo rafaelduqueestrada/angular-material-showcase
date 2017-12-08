@@ -28,10 +28,20 @@ export class PagedTableComponent implements OnInit, AfterViewInit {
   }
 
   onFilter(form: NgForm) {
-    console.log(form);
-    console.log(this.dataSource);
+    console.log(form.value.name);
+    console.log(this.dataSource.paginator.pageIndex);
+    console.log(this.dataSource.paginator.pageSize);
 
-    this.dataSource.data = this.elementService.database;
+    this.dataSource.data = this.elementService.getPagedElements(this.dataSource.paginator.pageSize,
+                                                              this.dataSource.paginator.pageIndex);
+
+    console.log(this.dataSource.paginator);
+
+    this.dataSource.paginator.length = this.elementService.getLengthElements();
+
+    console.log(this.dataSource.paginator);
+
+    console.log(this.dataSource.data);
   }
 
   ngAfterViewInit() {
